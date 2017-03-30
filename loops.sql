@@ -17,6 +17,7 @@ begin
         DBMS_OUTPUT.PUT_LINE('item.numb=' || item.numb);          
     FOR i IN 1..300 LOOP
         nextValue:=trunc(dbms_random.value(1000,9999),2);
+        DBMS_RANDOM.TERMINATE; 
         DBMS_OUTPUT.PUT_LINE('i = '||i||'value =' || nextValue);    
     END LOOP;    
       
